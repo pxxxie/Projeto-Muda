@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+	
+	<!-- ÍCONE -->
+	<link rel="icon" type="imagem/png" href="img/logo/LogoVerdeC.png" />
+
+    <link rel="stylesheet" type="text/css" href="css.css" />
+    <script src="jquery-3.4.1.min.js"> </script>
+
+	<!-- ANIMAÇÃO DE MUDAR A PAG  -->
+	<link rel="stylesheet" href="dist/css/animsition.min.css"> <!-- animsition.css -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script> <!-- jQuery -->
+	<script src="dist/js/animsition.min.js"></script> <!-- animsition.js -->
+
+    <!-- Fontes-->
+    <link href="https://fonts.googleapis.com/css2?family=Neucha&display=swap" rel="stylesheet"> <!-- NEUCHA -->
+	
+	<title> MUDA </title>
+
+    <style> 
+        body{ 
+            background-image: url("img/background2.png");
+        } 
+		.login{
+			background-image: url("img/icone/PerfilVerdeE.png");
+		}
+		.topo{
+			background-image: url("img/background2.png");
+		}
+		.txtRodape{ 
+			color: #E0EBE3;
+		}
+		.dropdown{ 
+			background-image: url('img/hamburguerverde.png');
+		}
+		.dropdown-content{ 
+			background-image: url('img/background2.png');
+			color: #B8CB66;
+		}
+		p.VOLTAR{ 
+			color: #B8CB66;
+			text-align: right; 
+		}
+		p.VOLTAR:hover{ 
+			color: black; 
+		}
+		a{
+			color:#B8CB66;	
+		}
+		img{ 
+			border-radius: 20%; 
+		}	
+	</style> 
+
+</head>
+<body>
+<div class="animsition">
+		<!-- topo -->
+		<div class="topo"> </div>
+		<a href="#" class="menu-open"> <div class="login"></div></a>
+		
+		<div class="logo">
+			<a href="index.html"><img src="img/logo/LogoVerdeC.png" width=75% height=75%></a>
+		</div>
+		<div class="catalogo"> <a href="infografico.html"> CONSUMO CONSCIENTE </a> </div>		
+		<!-- Menu lateral verde -->            
+		<div class="menu-overlay"></div> <p></p> 
+		<div class="side-menu-wrapper">
+            <a href="#" class="menu-close" >×</a><br> 
+            <ul>
+				<li></li>
+				<li> Nome do usuário</li>
+				<li> <a href="catalogo.html" ></a> </li> 
+                <li><a href="infografico.html"> Consumo Consciente </a></li>
+				<li><a href="badges.html"> Meus badges </a></li>
+                <li><a href="lista_produtos.html"> Planejamento de consumo </a></li>
+				<li><a href="logout.html"> Sair </a></li>
+			</ul>
+		</div>
+		
+		<!-- Conteúdo da página -->
+				<div class="divcatalogo">      
+					<div class="conteudocatalogo">   
+						<div class="conteudodesktop"> 
+						<table>
+							<tr>
+							<th> 
+								<div class="img"> 						
+									<center>
+									<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcROZlxMblzIFfXB_PMdfmUF9FSV2ge-m9evQR8GJK-FqISpiYty&usqp=CAU">
+								    </center>
+								</div>
+								</th>
+							<th> <h1> Avaliação Batom Mac </h1> <br> Lastname <br> Lastname <br> Lastname </th>
+							</tr>
+						</table>
+						</div>
+						<div class="conteudomobile">	
+							    <center><br>
+								<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcROZlxMblzIFfXB_PMdfmUF9FSV2ge-m9evQR8GJK-FqISpiYty&usqp=CAU">
+								</center>
+							<br> <h1> Avaliação Batom Mac </h1> <br> Lastname <br> Lastname <br> Lastname
+                        </div>
+						<br>
+						<p class="txtTemaEscuro txtJustificado">
+							Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean tempus velit mauris, eu dapibus mauris lobortis a. Nulla luctus justo diam, vel cursus purus tempor id. Etiam efficitur risus quis odio consectetur, et malesuada tellus condimentum. Aliquam in turpis quis augue laoreet commodo. Morbi egestas, mauris id eleifend aliquet, tortor ex eleifend ante, quis sollicitudin mi neque sit amet ante. Aliquam id pretium ex. Aliquam quis orci in quam condimentum feugiat id eget nisl. Donec in dapibus purus. Nam non dui leo. Suspendisse vel venenatis dui. Aenean varius lacus sed metus elementum vehicula.
+							Nam sed justo a leo cursus mattis. Maecenas sed sapien neque. Donec et quam vestibulum, finibus nunc vitae, suscipit sapien. Quisque rhoncus, diam non mollis convallis, felis nunc malesuada nisi, nec aliquet turpis libero et nunc. Quisque sit amet dignissim erat, non lacinia nulla. Cras id porttitor velit, at aliquet ex. Fusce pharetra nisi mauris, sed sollicitudin diam euismod ut. Ut sodales purus dignissim rhoncus porttitor. Curabitur luctus, enim vel varius maximus, ex enim posuere risus, elementum fringilla magna nibh vitae turpis. Integer tellus eros, gravida eu nulla quis, posuere tempor urna. Duis quis dictum magna. Nulla vel semper felis, vitae fermentum diam.
+						</p>
+						<p class="VOLTAR" onclick="goBack()"> <i>VOLTAR</i></p>
+					</div>
+				</div>
+				<footer>
+					<center>
+						<p class="txtRodape"> Layout by: Catarina e Juliana - 2020 - </p>
+					</center>
+				</footer>
+			</div>
+			<script>
+				var slide_wrp 		= ".side-menu-wrapper"; //Menu Wrapper
+				var open_button 	= ".menu-open"; //Menu Open Button
+				var close_button 	= ".menu-close"; //Menu Close Button
+				var overlay 		= ".menu-overlay"; //Overlay
+				$(slide_wrp).hide().css( {"right": -$(slide_wrp).outerWidth()+'px'}).delay(50).queue(function(){$(slide_wrp).show()}); 
+				$(open_button).click(function(e){
+					e.preventDefault();
+					$(slide_wrp).css( {"right": "0px"});
+					setTimeout(function(){
+						$(slide_wrp).addClass('active');
+					},50);
+					$(overlay).css({"opacity":"1", "width":"100%"});
+				});
+				$(close_button).click(function(e){
+					e.preventDefault();
+					$(slide_wrp).css( {"right": -$(slide_wrp).outerWidth()+'px'});
+					setTimeout(function(){
+						$(slide_wrp).removeClass('active');
+					},50);
+					$(overlay).css({"opacity":"0", "width":"0"});
+				});
+				$(document).on('click', function(e) {
+					if (!e.target.closest(slide_wrp) && $(slide_wrp).hasClass("active")){
+						$(slide_wrp).css( {"right": -$(slide_wrp).outerWidth()+'px'}).removeClass('active');
+						$(overlay).css({"opacity":"0", "width":"0"});
+					}
+				});
+				$(document).ready(function() {
+					$(".animsition").animsition({
+						inClass: 'fade-in',
+						outClass: 'fade-out',
+						inDuration: 1500,
+						outDuration: 800,
+						linkElement: '.animsition-link',
+						// e.g. linkElement: 'a:not([target="_blank"]):not([href^="#"])'
+						loading: true,
+						loadingParentElement: 'body', //animsition wrapper element
+						loadingClass: 'animsition-loading',
+						loadingInner: '', // e.g '<img src="loading.svg" />'
+						timeout: false,
+						timeoutCountdown: 5000,
+						onLoadEvent: true,
+						browser: [ 'animation-duration', '-webkit-animation-duration'],
+						// "browser" option allows you to disable the "animsition" in case the css property in the array is not supported by your browser.
+						// The default setting is to disable the "animsition" in a browser that does not support "animation-duration".
+						overlay : false,
+						overlayClass : 'animsition-overlay-slide',
+						overlayParentElement : 'body',
+						transition: function(url){ window.location.href = url; }
+					});
+				});
+				/* BOTÃO VOLTAR */
+				function goBack() {
+					window.history.back()
+				}
+				 /*MENU DROPDOWN*/
+				/* When the user clicks on the button, 
+				toggle between hiding and showing the dropdown content */
+				function myFunction() {
+				document.getElementById("myDropdown").classList.toggle("show");
+				}
+
+				// Close the dropdown if the user clicks outside of it
+				window.onclick = function(event) {
+				if (!event.target.matches('.dropdown')) {
+					var dropdowns = document.getElementsByClassName("dropdown-content");
+					var i;
+					for (i = 0; i < dropdowns.length; i++) {
+					var openDropdown = dropdowns[i];
+					if (openDropdown.classList.contains('show')) {
+						openDropdown.classList.remove('show');
+					}
+					}
+					}
+					}
+			</script> 
+		</body>
+		</html>

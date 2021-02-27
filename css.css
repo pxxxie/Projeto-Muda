@@ -1,0 +1,453 @@
+/*
+#392B19 Marrom 
+#003E30 Verde Escuro
+#B8CB66 Verde Claro
+#ACD6DA Azul
+#E0EBE3 Azul Claro
+*/
+
+/*DESKTOP OU GERAL*/ 
+* { /* FAZ A TELA TER FULL SIZE HORIZONTALMENTE */
+      margin: 0;
+      padding: 0;
+}
+/* HOVER BOTÕES NA PÁGINA INICIAL (pesquisar) */
+#btnAlimentacao:hover{
+	content: url("img/icone/AlimentacaoAzulE.png");
+}
+#btnEletronico:hover{
+	content: url("img/icone/EletronicoAzulE.png");
+}
+#btnAgricultura:hover{
+	content: url("img/icone/AgriculturaAzulE.png");
+}
+#btnVestimenta:hover{
+	content: url("img/icone/VestimentaAzulE.png");
+}
+#btnCosmetico:hover{
+	content: url("img/icone/CosmeticoAzulE.png");
+}
+
+body { 
+    font-family: 'Neucha', cursive;
+    color:#392B19;
+    background-image: url("img/background.png");
+	overflow-x: hidden; /* ESCONDE A BARRA DE ROLAGEM HORIZONTAL */
+}
+/* FONTE LOUISE */
+@font-face{
+	font-family: "Louise";
+	src: url('fonte/Louise.otf');
+}
+.Louise-font{
+	font-family: "Louise";
+}
+/*TOPO*/
+.topo{
+	background-image: url("img/backgroundmenu.png");
+	width: 100%;
+	height: 100px;
+	position: fixed;
+} 
+/* MENU GERAL SLIDE */ 
+.side-menu-wrapper { /* style menu wrapper */
+	background-image: url("img/background.png");
+	padding: 40px 0 0 40px;
+	position: fixed; /* Fixed position */
+	top: 0;
+	right: 0; /* Sidebar initial position. "right" for right positioned menu */
+	height: 100%;
+	z-index: 2;
+	transition: 0.5s; /* CSS transition speed */
+	width: 250px;
+    box-sizing: border-box;
+    text-align: left;
+}
+.side-menu-wrapper > ul{ /* css ul list style */
+    list-style:none;
+	padding:0;
+	margin:0;
+    overflow-y: auto; /* enable scroll for menu items */
+	height:95%;
+}
+.side-menu-wrapper > ul > li > a { /* links */
+    display: block;
+    padding: 6px 4px 6px 4px;
+    color: #003E30;
+    transition: 0.3s;
+	text-decoration: none;
+}
+.side-menu-wrapper > a.menu-close { /* close button */
+    padding: 8px 0 4px 23px;
+    color: #003E30;
+    display: block;
+    margin: -30px 0 -10px -20px;
+    font-size: 40px;
+    text-decoration: none;
+}
+.menu-overlay { /* overlay */
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: rgba(0,0,0,.7);
+    overflow-y: auto;
+    overflow-x: hidden;
+    text-align: center;
+    opacity: 0;
+    transition: opacity 1s;
+}
+/* H1, H2, P, A, ETC */ 
+h1{ 
+	text-align: center; 
+	font-family: Louise;
+	color: #B8CB66;
+	font-size: 32px; 
+}
+h2 { 
+	text-align: center; 
+	font-family: Louise;
+	color: #B8CB66;
+	padding-top: 15px;
+	padding-bottom: 20px;
+	font-size: 24px;
+	/*background-image: url("img/background2.png");*/
+}
+h3{
+	text-align: center; 
+	font-family: Louise;
+	color: #B8CB66;
+	padding-top: 15px;
+	padding-bottom: 20px;
+	font-size: 19px;
+}
+p{
+	color: #392B19;
+	font-size: 17px;
+	margin-left: 50px;
+	margin-right: 50px;
+	line-height: 25px;
+}
+.txtTemaEscuro{
+	color: #E0EBE3;
+	font-size: 15px;
+	line-height: 25px;
+}
+.txtJustificado{
+	text-align: justify;
+}
+a{
+	cursor: pointer;
+	text-decoration: none;
+	color:#392B19;	
+}
+/* POSICIONAMENTO DO CONTEÚDO DO SITE */ 
+@media only screen and (min-width: 870px) { 
+	.conteudodesktop{ 
+		padding: 80px;
+	}
+	.conteudomobile{ 
+		display: none;
+	}
+}
+/* MENU DE CIMA COM LOGO PEQUENO E LOGIN/PERFIL */ 
+.login { 
+	position: fixed;
+	top: 4%;
+    right: 2%; 
+	width: 45px;
+	text-align: center;
+	background-image: url('img/icone/PerfilMarrom.png');
+	height: 45px;
+}
+.logo {
+	position: fixed;
+	top: 3%;
+	left: 2%;
+	width: 60px;
+	height: 63px;
+}
+.catalogo { 
+	position: fixed;
+	top: 6%;
+	right: 10%; 
+	font-family: Louise;
+	color: #392B19;
+}
+.infografico{ 
+	position: fixed;
+	top: 6%;
+	right: 22%; 
+	font-family: Louise;
+	color: #392B19;
+}
+.intro{
+	margin: 0px;
+}
+.txtRodape{
+	font-size: 15px;
+	padding-top: 50px;
+	padding-bottom: 10px;
+}
+a[href="#top"]{
+    padding:10px;
+    position:fixed;
+    top: 87%;
+    right:2%;
+    display:none;
+    font-size: 30px;
+}
+a[href="#top"]:hover{
+    text-decoration:none;
+}
+/* BOTÃO */
+.btn{
+	color: black;
+	font-family: 'Neucha', cursive;
+	text-align: center;
+	text-decoration: none;
+	font-size: 20px;
+	border-radius: 4px;
+	padding: 25px 50px;
+	transition-duration: 0.5s;
+	border: none;
+	background-color: #B8CB66;
+	cursor: pointer;
+}
+.btn:hover{
+	background-color: #003E30;
+	color: white;
+}
+.btn:active{
+	background-color: #392B19;
+	color: white;
+}
+
+@media only screen and (min-width: 870px) { 
+	.btnIcon{
+		margin: 15px;
+		padding-top: 6px;
+	}
+	#btnAlimentacao{
+		margin-left: 8px;
+		margin-right: 8px;
+	}
+	#btnEletronico{
+		margin-left: 8px;
+		margin-right: 8px;
+	}
+	#btnAgricultura{
+		margin-left: 8px;
+		margin-right: 8px;
+	}
+	#btnVestimenta{
+		margin-left: 8px;
+		margin-right: 8px;
+	}
+	#btnCosmetico{
+		margin-left: 8px;
+		margin-right: 8px;
+	}
+} 
+
+/*ÍCONES*/
+
+.icone{ 
+	background-image:url('img/icone/VestimentaAzulC.png');
+	background-size:cover;
+	width: 200px;
+	height: 200px;
+}
+.icone:hover{
+	background-image:url('img/icone/VestimentaAzulE.png');
+	background-size:cover;
+	width: 200px;
+	height: 200px;
+}
+/*PÁGINA DO CATÁLAGO E DO PRODUTO*/  
+/* DIV DA PESQUISA E DO CATÁLAGO*/ 
+.divcatalogo { 
+    padding-right: 0px;
+    margin-right: 0px;
+	padding: 0px;
+	color: #E0EBE3;
+	background-image: url('img/background2.png');
+    text-align: left; 
+	width: 100%;
+}
+input[type="text"]{
+	font-family: 'Neucha', cursive;
+}
+input[type="email"]{
+	font-family: 'Neucha', cursive;
+}
+input[type="password"]{
+	font-family: 'Neucha', cursive;
+}
+  /* DIV CONTEÚDO DO CATÁLOGO */ 
+@media only screen and (min-width: 870px) { 
+	.conteudocatalogo { 
+		padding-left: 300px;
+		padding-right: 300px;
+		padding-top: 85px;
+	} 
+}
+/* CAIXA DE PESQUISA DE ITEMS */
+* {
+	box-sizing: border-box;
+} 
+/* ESTILO DA CAIXA DE PESQUISA  */
+#mySearch {
+	width: 95%;
+    font-size: 18px;
+    height: 36px;
+	border: 1px solid #ddd;
+	border-radius: 10px;
+}
+.btnSelect{
+	position: relative;
+	font-family: 'Neucha', cursive;
+    font-size: 18px;
+	color: #392B19;
+    height: 36px;
+	border: 1px solid #ddd;
+	border-radius: 10px;
+}
+.btnSelect select {
+  display: none; /*hide original SELECT element:*/
+}
+/* ESTILO DA NAVEGAÇÃO DENTRO DA LISTA DE ITENS */
+#myMenu {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+#myMenu li a {
+    padding: 12px;
+	text-decoration: none;
+    display: block;
+}
+/*PÁGINA DO CATÁLOGO*/ 
+/* TABELA DOS ITENS */
+.tabelaitens {
+	overflow: hidden;
+	position: relative;
+}
+.tabelaitens a {
+	padding: 14px 16px;
+	text-decoration: none;
+	color: #E0EBE3;
+	font-size: 17px;
+	display: block;
+}
+.tabelaitens a.vermais {
+	display: block;
+	color: #B8CB66;
+	position: absolute;
+	right: 0;
+	top: 0;
+}
+.tabelaitens a:hover {
+	background-color: #ddd;
+	color: black;
+}
+/*PÁGINA EM BREVE*/
+.aviso{
+	padding: 20px;
+	margin-top: 100px;
+	font-size: 25px;
+	text-align: center;
+}
+/*PÁGINA DO PRODUTO*/
+table{ 
+	width: 100%;
+}
+/* PÁGINA DE LOGIN DESKTOP */
+@media only screen and (min-width: 870px) {
+	.left {
+		left: 10%;
+		position: fixed;
+		top: 30%;
+	}
+	.right {
+		right: 10%;
+		position: fixed;
+		top: 30%;
+	}
+}
+/*MOBILE*/ 
+@media only screen and (max-width: 870px) { 
+	/* PÁGINA DE LOGIN */
+	.left{
+		margin-top: 25%;
+		position: relative;
+	}
+	.right{
+		margin-top: 15%;
+		position: relative;
+		padding-left: 3%;
+		padding-right: 3%;
+		padding-bottom: 30px;
+	}
+/*BOTÃO*/ 
+	.btnIcon{
+		/*margin: 5px;*/
+		padding-top: 6px;
+	}
+	a img{
+		width: 19%;
+		height: 19%;
+	}
+	.logo a img{
+		width: 60%;
+		height: 60%;
+	}
+/*DIV CONTEÚDO PÁGINA INDEX*/
+	.conteudodesktop{ 
+		display: none; 
+	}	
+/*DIV CONTEÚDO PÁGINA CATÁLOGO*/ 
+	.conteudocatalogo { 
+		padding-left: 20px;
+		padding-right: 20px;
+		padding-top: 50px;
+	}   
+	.catalogo {
+		display: none;
+	}
+	.infografico { 
+		display: none;
+	}
+/*MENU TOPO*/
+	.topo{ 
+		height: 60px;
+		box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+	}	  
+	.login{ 
+		top: 1%;
+	}		
+	.logotopo {
+		background-image: url("img/logo/LogoMarrom.png");
+		position: fixed;
+		top: 1%;
+		left: 2%; 
+		width: 45px;
+		height: 45px;
+	}
+	.show {
+		display: block;
+	}
+	.logo{
+		position: fixed;
+		top: 2%;
+		left: 2%;
+		width: 60px;
+		height: 63px;
+	}
+/*H2, P, A, ETC*/ 
+	h2{ 
+		font-size: 24px;
+	}
+} 

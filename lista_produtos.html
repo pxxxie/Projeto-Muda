@@ -1,0 +1,216 @@
+<html>
+<head> 
+<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+	
+	<!-- ÍCONE -->
+	<link rel="icon" type="imagem/png" href="img/logo/LogoVerdeC.png" />
+
+    <link rel="stylesheet" type="text/css" href="css.css" />
+    <script src="jquery-3.4.1.min.js"> </script>
+
+	<!-- ANIMAÇÃO DE MUDAR A PAG  -->
+	<link rel="stylesheet" href="dist/css/animsition.min.css"> <!-- animsition.css -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script> <!-- jQuery -->
+	<script src="dist/js/animsition.min.js"></script> <!-- animsition.js -->
+
+	<!-- FONTES -->
+    <link href="https://fonts.googleapis.com/css2?family=Neucha&display=swap" rel="stylesheet"> <!-- NEUCHA -->
+	
+	<title> Produtos Consumidos - MUDA </title> 
+	<style>
+		@media only screen and (min-width: 870px) {
+			.conteudoProd{
+				padding-left: 100px;
+				padding-right: 100px;
+				padding-top: 160px;
+			}
+		}
+		@media only screen and (max-width: 870px) {
+			.conteudoProd{
+				padding-left: 50px;
+				padding-right: 50px;
+				padding-top: 100px;
+			}
+			.btn{
+				color: black;
+				font-family: 'Neucha', cursive;
+				text-align: center;
+				text-decoration: none;
+				font-size: 20px;
+				border-radius: 4px;
+				padding: 25px 50px;
+				transition-duration: 0.5s;
+				border: none;
+				background-color: #B8CB66;
+				cursor: pointer;
+			}
+			.btn:hover{
+				background-color: #003E30;
+				color: white;
+			}
+			}
+			body { 
+				background-image: url('img/backgroundmenu.png');
+			}
+
+			h1{ 
+    			color: #392B19;
+    			font-size: 24px;
+			}
+			h2 {
+			    color: #392B19;
+			}
+			h3 { 
+    			color: #003E30;	
+    			font-size: 24px;
+			}
+			h4 {
+    			color: #B8CB66;	
+    			font-size: 24px;
+			}
+			@media only screen and (max-width: 870px) { 
+    			h2{
+    			    font-size:36px;
+    			}
+			} 
+
+	</style>
+</head> 
+<body> <div class="animsition">
+		<!-- topo -->
+		<div class="topo"> </div>
+		<a href="#" class="menu-open"> <div class="login"></div></a>
+		
+		<div class="logo">
+			<a href="index.html"><img src="img/logo/LogoMarrom.png" width=75% height=75%></a>
+		</div>
+		<div class="catalogo"> <a href="infografico.html"> CONSUMO CONSCIENTE </a> </div>		
+		<!-- Menu lateral verde -->            
+		<div class="menu-overlay"></div> <p></p> 
+		<div class="side-menu-wrapper">
+            <a href="#" class="menu-close" >×</a><br> 
+            <ul>
+				<li></li>
+				<li> Nome do usuário</li>
+				<li> <a href="catalogo.html" ></a> </li> 
+                <li><a href="infografico.html"> Consumo Consciente </a></li>
+				<li><a href="badges.html"> Meus badges </a></li>
+                <li><a href="lista_produtos.html"> Planejamento de consumo </a></li>
+				<li><a href="logout.html"> Sair </a></li>
+			</ul>
+		</div>
+		<div class="conteudoProd">  
+			<h2> Produtos consumidos: Junho </h2> <br> <br> 
+			
+<h1> Alimentação </h1>
+<h2>x<h2>
+<h1> Eletrônicos </h1>
+<h2>x<h2>
+    <h1> Agricultura </h1>  
+<h2>x<h2>
+<h1> Roupas </h1>
+<h2>x<h2>
+    <h1> Cosméticos </h1> 
+<h2>x<h2>
+			
+			<br> <br> 
+			
+			<h3> Em junho foram consumidos x produtos sendo x destes sustentáveis e x destes veganos. </h3>
+
+			<br> 
+
+		</div>
+		<center>
+			<a href="cad_produtos.html" class="btn"> Cadastrar novo consumo <!--<img src="img/icone/MaisVerdeC.png" width=15% height=15%>--> </a>
+		</center>
+		<footer>
+			<center>
+				<p class="txtRodape"> @Copyright 2020 - Grupo HARPIA </p>
+			</center>
+		</footer>
+	</div>
+	<script>
+        var slide_wrp 		= ".side-menu-wrapper"; //Menu Wrapper
+        var open_button 	= ".menu-open"; //Menu Open Button
+        var close_button 	= ".menu-close"; //Menu Close Button
+        var overlay 		= ".menu-overlay"; //Overlay
+        $(slide_wrp).hide().css( {"right": -$(slide_wrp).outerWidth()+'px'}).delay(50).queue(function(){$(slide_wrp).show()}); 
+        $(open_button).click(function(e){
+            e.preventDefault();
+            $(slide_wrp).css( {"right": "0px"});
+            setTimeout(function(){
+                $(slide_wrp).addClass('active');
+            },50);
+            $(overlay).css({"opacity":"1", "width":"100%"});
+        });
+        $(close_button).click(function(e){
+            e.preventDefault();
+            $(slide_wrp).css( {"right": -$(slide_wrp).outerWidth()+'px'});
+            setTimeout(function(){
+                $(slide_wrp).removeClass('active');
+            },50);
+            $(overlay).css({"opacity":"0", "width":"0"});
+        });
+        $(document).on('click', function(e) {
+            if (!e.target.closest(slide_wrp) && $(slide_wrp).hasClass("active")){
+                $(slide_wrp).css( {"right": -$(slide_wrp).outerWidth()+'px'}).removeClass('active');
+                $(overlay).css({"opacity":"0", "width":"0"});
+            }
+        });
+        function myFunction() {
+        	var input, filter, ul, li, a, i;
+        	input = document.getElementById("mySearch");
+        	filter = input.value.toUpperCase();
+        	ul = document.getElementById("myMenu");
+        	li = ul.getElementsByTagName("li");
+        	for (i = 0; i < li.length; i++) {
+            	a = li[i].getElementsByTagName("a")[0];
+            	if (a.innerHTML.toUpperCase().indexOf(filter) > -1) {
+            	li[i].style.display = "";
+            	} else {
+            		li[i].style.display = "none";
+            	}
+        	}
+        }
+		$(document).ready(function() {
+        	$(".animsition").animsition({
+            	inClass: 'fade-in',
+            	outClass: 'fade-out',
+            	inDuration: 1500,
+				outDuration: 800,
+            	linkElement: '.animsition-link',
+				// e.g. linkElement: 'a:not([target="_blank"]):not([href^="#"])'
+				loading: true,
+				loadingParentElement: 'body', //animsition wrapper element
+				loadingClass: 'animsition-loading',
+				loadingInner: '', // e.g '<img src="loading.svg" />'
+				timeout: false,
+				timeoutCountdown: 5000,
+				onLoadEvent: true,
+				browser: [ 'animation-duration', '-webkit-animation-duration'],
+				// "browser" option allows you to disable the "animsition" in case the css property in the array is not supported by your browser.
+				// The default setting is to disable the "animsition" in a browser that does not support "animation-duration".
+				overlay : false,
+				overlayClass : 'animsition-overlay-slide',
+				overlayParentElement : 'body',
+				transition: function(url){ window.location.href = url; }
+			});
+		});
+		$(document).ready(function(){
+			$(window).scroll(function(){
+				if ($(this).scrollTop() > 100) {
+					$('a[href="#top"]').fadeIn();
+				} else {
+					$('a[href="#top"]').fadeOut();
+				}
+			});
+			$('a[href="#top"]').click(function(){
+				$('html, body').animate({scrollTop : 0},800);
+				return false;
+			});
+		});
+	</script> 
+</body>
+</html>
