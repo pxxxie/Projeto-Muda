@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<!-- ÍCONE -->
+	<link rel="icon" type="imagem/png" href="img/logo/LogoVerdeC.png" />
+    <link rel="stylesheet" type="text/css" href="css.css" />
+    <script src="jquery-3.4.1.min.js"> </script>
+	<!-- ANIMAÇÃO DE MUDAR A PAG  -->
+	<link rel="stylesheet" href="dist/css/animsition.min.css"> <!-- animsition.css -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script> <!-- jQuery -->
+	<script src="dist/js/animsition.min.js"></script> <!-- animsition.js -->
+    <!-- Fontes-->
+    <link href="https://fonts.googleapis.com/css2?family=Neucha&display=swap" rel="stylesheet"> <!-- NEUCHA -->
+	<title> MUDA - O Lobo do Mar </title>
+    <style> 
+        body{ 
+            background-image: url("img/background2.png");
+        } 
+		.login{
+			background-image: url("img/icone/PerfilVerdeE.png");
+		}
+		.topo{
+			background-image: url("img/background2.png");
+		}
+		.txtRodape{ 
+			color: #E0EBE3;
+		}
+		.dropdown{ 
+			background-image: url('img/hamburguerverde.png');
+		}
+		.dropdown-content{ 
+			background-image: url('img/background2.png');
+			color: #B8CB66;
+		}
+		p.VOLTAR{ 
+			color: #B8CB66;
+			text-align: right; 
+		}
+		p.VOLTAR:hover{ 
+			color: black; 
+		}
+		a{
+			color:#B8CB66;	
+		}
+		img{ 
+			border-radius: 20%; 
+		}	
+		@media only screen and (min-width: 870px) { 
+			.conteudocatalogo { 
+				padding-left: 250px;
+				padding-right: 250px;
+				margin-top: 0px;
+				padding-top: 30px;
+			} 
+			.conteudodesktop{ 
+				padding: 0px;
+			}
+		}
+		@media only screen and (max-width: 870px) {
+			.conteudocatalogo { 
+				padding-left: 20px;
+				padding-right: 20px;
+				margin-top: 20px;
+			} 
+		}
+		h1{ 
+			text-align: center; 
+			font-family: Louise;
+			color: #B8CB66;
+			font-size: 32px; 
+			padding-top: 3px;
+		}
+		h3{
+			text-align: center; 
+			font-family: Louise;
+			color: #B8CB66;
+			padding-top: 15px;
+			padding-bottom: 20px;
+			font-size: 19px;
+		}
+		p{
+			color: #392B19;
+			font-size: 20px;
+			margin-left: 50px;
+			margin-right: 50px;
+			line-height: 18px;
+		}
+	</style> 
+</head>
+<body>
+   
+<div class="animsition">
+		<!-- topo -->
+		<div class="topo"> </div>
+		<a href="#" class="menu-open"> <div class="login"></div></a>
+		
+		<div class="logo">
+			<a href="index.html"><img src="img/logo/LogoVerdeC.png" width=75% height=75%></a>
+		</div>
+		<div class="catalogo"> <a href="infografico.html"> CONSUMO CONSCIENTE </a> </div>		
+		<!-- Menu lateral verde -->            
+		<div class="menu-overlay"></div> <p></p> 
+		<div class="side-menu-wrapper">
+            <a href="#" class="menu-close" >×</a><br> 
+            <ul>
+				<li></li>
+				<li> Nome do usuário</li>
+				<li> <a href="catalogo.html" ></a> </li> 
+                <li><a href="infografico.html"> Consumo Consciente </a></li>
+				<li><a href="badges.html"> Meus badges </a></li>
+                <li><a href="lista_produtos.html"> Planejamento de consumo </a></li>
+				<li><a href="logout.html"> Sair </a></li>
+			</ul>
+		</div>
+
+	
+		<!-- Conteúdo da página -->
+		<div class="divcatalogo">      
+			<div class="conteudocatalogo">   
+			<br> <br> <br> <br>
+				<div class="conteudodesktop"> 
+					<center><br>
+						<img src="https://www.newoldman.com.br/media/wysiwyg/Logo%20O%20Lobo%20do%20Mar.jpg" width="25%" height="25%">
+						<h1> O Lobo do Mar </h1>
+						<h3> VEGANO | CRUELTY-FREE | ORGÂNICO | SUSTENTÁVEL | CONSCIENTE </h3>
+					</center>
+				</div>
+				<div class="conteudomobile">	
+					<center><br>
+						<img src="https://www.newoldman.com.br/media/wysiwyg/Logo%20O%20Lobo%20do%20Mar.jpg" width="40%" height="40%">
+						<h1> O Lobo do Mar </h1>
+						<h3> VEGANO | CRUELTY-FREE | ORGÂNICO | SUSTENTÁVEL | CONSCIENTE </h3>
+					</center>
+				</div>
+				<br>
+				<p class="txtTemaEscuro txtJustificado">
+					O Lobo do Mar é uma marca brasileira fundada em 2015, voltada para o público masculino e tem como foco os cuidados para barbas, contando com ceras, óleos e bálsamos. O criador da marca afirma que o mercado relacionado ao homem não cuidar de sua aparência está mudando e que um homem com uma aparência mais cuidada se sente mais confiante.
+				</p> <p class="txtTemaEscuro txtJustificado">
+					Seus produtos são veganos e cruelty free além de serem confeccionados artesanalmente. 
+				</p>
+				<br> <br>
+				<h4> Referências </h4> <br>
+				<a href=”https://www.olobodomar.com/quemsomos/”> O Lobo do Mar - Sobre </a> <br>
+				<a href=”https://bityli.com/hwjJc”> Revista Trip </a>
+				<br> <br>
+				<p class="VOLTAR" onclick="goBack()"> <i> VOLTAR </i></p>
+			</div>
+		</div>
+		<footer>
+			<center>
+				<p class="txtRodape"> @Copyright 2020 - Grupo HARPIA </p>
+			</center>
+		</footer>
+	</div>
+	<script>
+				var slide_wrp 		= ".side-menu-wrapper"; //Menu Wrapper
+				var open_button 	= ".menu-open"; //Menu Open Button
+				var close_button 	= ".menu-close"; //Menu Close Button
+				var overlay 		= ".menu-overlay"; //Overlay
+				$(slide_wrp).hide().css( {"right": -$(slide_wrp).outerWidth()+'px'}).delay(50).queue(function(){$(slide_wrp).show()}); 
+				$(open_button).click(function(e){
+					e.preventDefault();
+					$(slide_wrp).css( {"right": "0px"});
+					setTimeout(function(){
+						$(slide_wrp).addClass('active');
+					},50);
+					$(overlay).css({"opacity":"1", "width":"100%"});
+				});
+				$(close_button).click(function(e){
+					e.preventDefault();
+					$(slide_wrp).css( {"right": -$(slide_wrp).outerWidth()+'px'});
+					setTimeout(function(){
+						$(slide_wrp).removeClass('active');
+					},50);
+					$(overlay).css({"opacity":"0", "width":"0"});
+				});
+				$(document).on('click', function(e) {
+					if (!e.target.closest(slide_wrp) && $(slide_wrp).hasClass("active")){
+						$(slide_wrp).css( {"right": -$(slide_wrp).outerWidth()+'px'}).removeClass('active');
+						$(overlay).css({"opacity":"0", "width":"0"});
+					}
+				});
+				$(document).ready(function() {
+					$(".animsition").animsition({
+						inClass: 'fade-in',
+						outClass: 'fade-out',
+						inDuration: 1500,
+						outDuration: 800,
+						linkElement: '.animsition-link',
+						// e.g. linkElement: 'a:not([target="_blank"]):not([href^="#"])'
+						loading: true,
+						loadingParentElement: 'body', //animsition wrapper element
+						loadingClass: 'animsition-loading',
+						loadingInner: '', // e.g '<img src="loading.svg" />'
+						timeout: false,
+						timeoutCountdown: 5000,
+						onLoadEvent: true,
+						browser: [ 'animation-duration', '-webkit-animation-duration'],
+						// "browser" option allows you to disable the "animsition" in case the css property in the array is not supported by your browser.
+						// The default setting is to disable the "animsition" in a browser that does not support "animation-duration".
+						overlay : false,
+						overlayClass : 'animsition-overlay-slide',
+						overlayParentElement : 'body',
+						transition: function(url){ window.location.href = url; }
+					});
+				});
+				/* BOTÃO VOLTAR */
+				function goBack() {
+					window.history.back()
+				}
+				 /*MENU DROPDOWN*/
+				/* When the user clicks on the button, 
+				toggle between hiding and showing the dropdown content */
+				function myFunction() {
+				document.getElementById("myDropdown").classList.toggle("show");
+				}
+
+				// Close the dropdown if the user clicks outside of it
+				window.onclick = function(event) {
+				if (!event.target.matches('.dropdown')) {
+					var dropdowns = document.getElementsByClassName("dropdown-content");
+					var i;
+					for (i = 0; i < dropdowns.length; i++) {
+					var openDropdown = dropdowns[i];
+					if (openDropdown.classList.contains('show')) {
+						openDropdown.classList.remove('show');
+					}
+					}
+					}
+					}
+			</script> 
+</body>
+</html>
