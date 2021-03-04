@@ -379,6 +379,10 @@ table{
 }
 /*MOBILE*/ 
 @media only screen and (max-width: 870px) { 
+	
+	.glyphicon glyphicon-chevron-up{ 
+	display: none;
+	}
 	/* PÁGINA DE LOGIN */
 	.left{
 		margin-top: 25%;
