@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<!-- ÍCONE -->
+	<link rel="icon" type="imagem/png" href="img/logo/LogoVerdeC.png" />
+    <link rel="stylesheet" type="text/css" href="css.css" />
+    <script src="jquery-3.4.1.min.js"> </script>
+	<!-- ANIMAÇÃO DE MUDAR A PAG  -->
+	<link rel="stylesheet" href="dist/css/animsition.min.css"> <!-- animsition.css -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script> <!-- jQuery -->
+	<script src="dist/js/animsition.min.js"></script> <!-- animsition.js -->
+	<!-- FONTES -->
+    <link href="https://fonts.googleapis.com/css2?family=Neucha&display=swap" rel="stylesheet"> <!-- NEUCHA -->
+    <title> MUDA </title>
+    <style>
+		@media only screen and (max-width: 870px) {
+			.imgInfoDesktop{
+				display: none;
+			}
+		}
+		@media only screen and (min-width: 870px) {
+			.imgInfoMobile{
+				display: none;
+			}
+		}
+		h2 { 
+			text-align: center; 
+			font-family: Louise;
+			color: #B8CB66;
+			padding-top: 15px;
+			padding-bottom: 20px;
+			font-size: 24px;
+		}
+		p{
+			color: #392B19;
+			font-size: 17px;
+			margin-left: 20px;
+			margin-right: 20px;
+			line-height: 20px;
+		}
+		p a{
+			color: #B8CB66;
+		}
+		p a:hover{
+			color: #003E30;
+		}
+	</style>
+</head>
+<body>
+<div class="animsition">
+		<!-- topo -->
+		<div class="topo"> </div>
+		<a href="#" class="menu-open"> <div class="login"></div></a>
+		
+		<div class="logo">
+			<a href="index.html"><img src="img/logo/LogoMarrom.png" width=75% height=75%></a>
+		</div>
+		<div class="catalogo"> <a href="infografico.html"> CONSUMO CONSCIENTE </a> </div>		
+		<!-- Menu lateral verde -->            
+		<div class="menu-overlay"></div> <p></p> 
+		<div class="side-menu-wrapper">
+            <a href="#" class="menu-close" >×</a><br> 
+            <ul>
+				<li></li>
+				<li> Nome do usuário</li>
+				<li> <a href="catalogo.html" ></a> </li> 
+                <li><a href="infografico.html"> Consumo Consciente </a></li>
+				<li><a href="badges.html"> Meus badges </a></li>
+                <li><a href="lista_produtos.html"> Planejamento de consumo </a></li>
+				<li><a href="logout.html"> Sair </a></li>
+			</ul>
+		</div>
+		
+        <!-- VOLTAR PRA CIMA --> 
+		<a href="#top" class="glyphicon glyphicon-chevron-up"><img src="img/icone/folhinha.png"> </a>
+		<center> 
+			<br> <br> <br>
+			<img src="img/infografico.png" class="imgInfoMobile" width="100%"> 
+			<img src="img/infografico.png" class="imgInfoDesktop" width="80%">
+			<br>
+			<h2> Referências </h2>
+			<p>
+				<a href="https://g1.globo.com/jornal-nacional/noticia/2019/03/22/pesquisadores-medem-o-volume-de-lixo-descartado-nos-rios-e-no-mar.ghtml"> Globo </a> |
+				<a href="https://g1.globo.com/natureza/noticia/2019/03/04/brasil-e-o-4o-maior-produtor-de-lixo-plastico-do-mundo-e-recicla-apenas-1.ghtml"> Globo </a> |
+				<a href="https://nacoesunidas.org/humanidade-produz-mais-de-2-bilhoes-de-toneladas-de-lixo-por-ano-diz-onu-em-dia-mundial/"> Nações Unidas </a> |
+				<a href="https://www.oeco.org.br/blogs/salada-verde/brasil-e-o-quarto-pais-que-mais-produz-lixo-plastico-no-mundo/"> OEco </a> |
+				<a href="http://www.resol.com.br/curiosidades/curiosidades2.php?id=2293"> Resol </a> |
+				<a href="https://www.theatlantic.com/business/archive/2012/06/26-trillion-pounds-of-garbage-where-does-the-worlds-trash-go/258234/"> The Atlantic </a>
+			</p>
+		</center>
+		
+		<footer>
+			<center>
+				<p class="txtRodape"> @Copyright 2020 - Grupo HARPIA </p>
+			</center>
+		</footer>
+    </div>
+	<!-- Scripts da página em jquery -->
+	<script>
+        var slide_wrp 		= ".side-menu-wrapper"; //Menu Wrapper
+        var open_button 	= ".menu-open"; //Menu Open Button
+        var close_button 	= ".menu-close"; //Menu Close Button
+        var overlay 		= ".menu-overlay"; //Overlay
+        $(slide_wrp).hide().css( {"right": -$(slide_wrp).outerWidth()+'px'}).delay(50).queue(function(){$(slide_wrp).show()}); 
+        $(open_button).click(function(e){
+            e.preventDefault();
+            $(slide_wrp).css( {"right": "0px"});
+            setTimeout(function(){
+                $(slide_wrp).addClass('active');
+            },50);
+            $(overlay).css({"opacity":"1", "width":"100%"});
+        });
+        $(close_button).click(function(e){
+            e.preventDefault();
+            $(slide_wrp).css( {"right": -$(slide_wrp).outerWidth()+'px'});
+            setTimeout(function(){
+                $(slide_wrp).removeClass('active');
+            },50);
+            $(overlay).css({"opacity":"0", "width":"0"});
+        });
+        
+        $(document).on('click', function(e) {
+            if (!e.target.closest(slide_wrp) && $(slide_wrp).hasClass("active")){
+                $(slide_wrp).css( {"right": -$(slide_wrp).outerWidth()+'px'}).removeClass('active');
+                $(overlay).css({"opacity":"0", "width":"0"});
+            }
+        });
+        function myFunction() {
+        	var input, filter, ul, li, a, i;
+        	input = document.getElementById("mySearch");
+        	filter = input.value.toUpperCase();
+        	ul = document.getElementById("myMenu");
+        	li = ul.getElementsByTagName("li");
+        	for (i = 0; i < li.length; i++) {
+            	a = li[i].getElementsByTagName("a")[0];
+            	if (a.innerHTML.toUpperCase().indexOf(filter) > -1) {
+            	li[i].style.display = "";
+            	} else {
+            		li[i].style.display = "none";
+            	}
+        	}
+        }
+		$(document).ready(function() {
+        	$(".animsition").animsition({
+            	inClass: 'fade-in',
+            	outClass: 'fade-out',
+            	inDuration: 1500,
+				outDuration: 800,
+            	linkElement: '.animsition-link',
+				// e.g. linkElement: 'a:not([target="_blank"]):not([href^="#"])'
+				loading: true,
+				loadingParentElement: 'body', //animsition wrapper element
+				loadingClass: 'animsition-loading',
+				loadingInner: '', // e.g '<img src="loading.svg" />'
+				timeout: false,
+				timeoutCountdown: 5000,
+				onLoadEvent: true,
+				browser: [ 'animation-duration', '-webkit-animation-duration'],
+				// "browser" option allows you to disable the "animsition" in case the css property in the array is not supported by your browser.
+				// The default setting is to disable the "animsition" in a browser that does not support "animation-duration".
+				overlay : false,
+				overlayClass : 'animsition-overlay-slide',
+				overlayParentElement : 'body',
+				transition: function(url){ window.location.href = url; }
+			});
+		});
+		
+
+        $(document).ready(function(){
+    $(window).scroll(function(){
+        if ($(this).scrollTop() > 100) {
+            $('a[href="#top"]').fadeIn();
+        } else {
+            $('a[href="#top"]').fadeOut();
+        }
+    });
+
+    $('a[href="#top"]').click(function(){
+        $('html, body').animate({scrollTop : 0},800);
+        return false;
+    });
+});
+
+	</script> 
+
+</body>
+</html>
