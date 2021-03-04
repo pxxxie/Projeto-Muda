@@ -380,7 +380,7 @@ table{
 /*MOBILE*/ 
 @media only screen and (max-width: 870px) { 
 	
-	#botaofolha{ 
+	a#botaofolha{ 
 	display: none;
 	}
 	
